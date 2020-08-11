@@ -1,0 +1,106 @@
+a {
+  text-decoration: none;
+}
+
+#home {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-title {
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.colors{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+#title {
+  color: white;
+  font-size: 5vw;
+}
+
+.hand {
+  height: 200px;
+  vertical-align: top;
+  filter: invert(1);
+}
+
+#hand-top {
+  transform: rotate(130deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#hand-bottom {
+  transform: rotate(-30deg) scaleX(-1);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*#white-half {
+    position: absolute;
+    vertical-align: bottom;
+    width: 250%;
+    height: 250%;
+    background-color:white;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  }*/
+
+  .teste {
+    position: absolute;
+    height: 400vh;
+    width: 400vw;
+    background:  linear-gradient(45deg,black 50%, white 50% );
+  }
+
+.white-half {
+  background-color: green;
+  width: 100%;
+  height: 50%;
+}
+
+.black-half {
+  background-color: black;
+  width: 100%;
+  height: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .colors {
+    animation: Triangle-spin infinite 10s linear;
+  }
+  .teste {
+    animation: grad-rotation infinite 10s linear;
+  }
+}
+
+@keyframes Triangle-spin {
+  /*0% {clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%)}
+  25% {clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%)}
+  25.01% {clip-path: polygon(0 0, 0 0, 100% 0, 100% 100%)}
+  50% {clip-path: polygon(0 100%, 0 0, 100% 0, 100% 0)}
+  50.01% {clip-path: polygon(0 100%, 0 100%, 0 0, 100% 0)}
+  75% {clip-path: polygon(100% 100%, 0 100%, 0 0, 0 0)}
+  75.01% {clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 0)}
+  99.99% {clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%)}
+  100% {clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%)}*/
+
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes grad-rotation {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
